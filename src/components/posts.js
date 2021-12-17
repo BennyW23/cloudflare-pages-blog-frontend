@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "@reach/router";
 
 const Posts = () => {
     const [posts, setPosts] = useState([]);
@@ -7,7 +6,7 @@ const Posts = () => {
     useEffect(() => {
         const getPosts = async () => {
             const resp = await fetch(
-                "https://serverless-api.signalnerve.workers.dev/api/posts"
+                "https://worker.intern-assignment.workers.dev/api/posts"
             );
             const postsResp = await resp.json();
             setPosts(postsResp);
@@ -20,10 +19,12 @@ const Posts = () => {
         <div>
             <h1>Posts</h1>
             {posts.map((post) => (
-                <div key={post.id}>
-                    <h2>
-                        <Link to={`/posts/${post.id}`}>{post.title}</Link>
-                    </h2>
+                <div>
+                    <h1>{post.title}</h1>
+                    <p>{post.text}</p>
+                    <p>
+                        <em>By {post.username}</em>
+                    </p>
                 </div>
             ))}
         </div>
