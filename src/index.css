@@ -11,3 +11,47 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.flex-item {
+  flex-basis: 10vw;
+  width: 100%;
+  max-width: 30em;
+}
+
+.post-outline {
+  outline: grey solid thin;
+  border-radius: 5px;  text-align: center;
+
+}
+.title-input {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.username-input {
+  font-style: italic;
+}
+
+.content-input {
+  width: 75%;
+}
+
+.share-input {
+  margin-bottom: 1em;
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
